@@ -6,7 +6,4 @@ const yandexMapLoad = require('../controllers/yandexMapLoad')
 router.get('/ymaps-loader.js', yandexMapLoad)  
 
 
-const suggestYandexMap = require('../controllers/suggestYandexMap')
-router.get('/suggest', suggestYandexMap)
-
 module.exports = router;
