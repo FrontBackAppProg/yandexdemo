@@ -3,6 +3,10 @@ dotenv.config();
 
 module.exports = yandexMapLoad = (req, res) => {
   const apiKey = process.env.YANDEX_MAPS_API_KEY;
+
+  // 🔥 Добавь CORS-заголовок:
+  res.setHeader('Access-Control-Allow-Origin', '*');
+
   res.type('application/javascript').send(`
     export async function load() {
       return new Promise((resolve) => {
